@@ -1,0 +1,141 @@
+Delivered-To: cameronfagan20@gmail.com
+Received: by 2002:a4f:218f:0:0:0:0:0 with SMTP id h137csp3178622ivh;
+        Mon, 5 Apr 2021 08:54:24 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJw75i881KGnBmNp8zahMDikDm6+7Cu1sSdqbmlPZTCbj1GxFpDmmjN6yPvJerggRu24gv51
+X-Received: by 2002:ae9:eb58:: with SMTP id b85mr25020828qkg.168.1617638064601;
+        Mon, 05 Apr 2021 08:54:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1617638064; cv=none;
+        d=google.com; s=arc-20160816;
+        b=s91Nf2fV9lDSbxT6r95JMHjWQDAAGUskR8TFU19HYNNeBa2gGHtHSi8nTCMVRE+svr
+         hniIOeeV/3H+HdSbVnyx0v6XPzUsPw9vx/X2mkG3iZtZge18dspfi2jGS4VB2FXTqdNF
+         EYYoMQKCEZmUmoLk1g+h43AffYWLUExQzZ5sCLsxurEuexIQLKVx4yD3vHjcqVqWWHHI
+         fgwex3prFy9bFlqaczm/QJF7bnQh4C0EsjroAM5FN1zLkjcK0UYLHAg9yIZIO6Tc25x3
+         608hIBTk8s+KC1B48NSyLr1ZDk8eOxVYZu/2dvF0zlViaLg/ggvIlYjrrJddGycml92A
+         Bngw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:mime-version:subject:message-id:cc:to:from:date
+         :dkim-signature;
+        bh=HfUHXIaFcbvccdQfEBN53iKiPKGffht8s5SiCYOQ7eI=;
+        b=fHwXpXjNrL1gTwbS+9gciEJOLMGCbK6U0RzJa5wgDRPKOhFvZPyX4pyUcwSqRmRWTP
+         YaKdVaySzYoYSNvs1or5FQJEsr/dZs8mJK7kANyI75bwTGtBLkWoRXH0J+Ry5Azxvt17
+         xOGKHmlqOfXpo9upHvohW+74KpHiWme5OxJzuVD7plpXhT581XvNRAYszaK9aa+laujL
+         td5dN6zJEekwQeQqx+t0mqgpn/LqRSZ3NdjsGclyEdF73IzIW4EgJxh8HeQW/9Vk6t+o
+         QtkNO+R1DuAsnwRmUBSOolBtR/gXH1gA3dhedUUVF2WpNsB0Q3bBowYOUdt7BkrWvphN
+         pUzw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b="of/DNAHk";
+       spf=pass (google.com: domain of kameran28@yahoo.com designates 74.6.132.123 as permitted sender) smtp.mailfrom=kameran28@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <kameran28@yahoo.com>
+Received: from sonic314-13.consmr.mail.bf2.yahoo.com (sonic314-13.consmr.mail.bf2.yahoo.com. [74.6.132.123])
+        by mx.google.com with ESMTPS id g7si10155664qtx.318.2021.04.05.08.54.24
+        for <cameronfagan20@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Apr 2021 08:54:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kameran28@yahoo.com designates 74.6.132.123 as permitted sender) client-ip=74.6.132.123;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b="of/DNAHk";
+       spf=pass (google.com: domain of kameran28@yahoo.com designates 74.6.132.123 as permitted sender) smtp.mailfrom=kameran28@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1617638064; bh=HfUHXIaFcbvccdQfEBN53iKiPKGffht8s5SiCYOQ7eI=; h=Date:From:To:Cc:Subject:References:From:Subject:Reply-To; b=of/DNAHkYio0oEUzsfpxUpgGUbfhOM4oQAWK2fkDOLnQjGBlX433PObnTBkRCtzQyFePqCWDiO7zJZFRdoTUKGcNzAoDZybqVQRd7vuNgNw7xEwvOrADWSQ7oE/TH4rPGi7WnuzcsPtBXvfupGOTX7pcKQA/XV/VdAWfSK9gWNYFJ5tBgEe8DDUirr0MTh4Ely4dXmrvFbVfohygL+SDCDUEWERgT02Al1n8qB2WHMEqEMEA6+AeQPX2nxT4qRKsFHOFgF253vlsCN0lyvbm96mAqfQsRJV+al9g1Y0WyoBpAHZslggjnu43TeZY6wSJYo7gxgkijWqzrIr4nRcUnA==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1617638064; bh=e1QbgjwL7l1KSCdMZxvnK3yR5BE8aj4OQTWe2cSqfZR=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=ky1/QXjX76xGg4zSJtHTXAfAaZNnfCJlwpujq3omdPBlOxBFRG+vdDQ1qrI9EHTkofF9GLKQVOD5ZmElYS+2H8+G6Ao1aNUZcDqfl9ZUVJbJJLIKgS7JFOAYiKYHSJJAjdLvlm80F1CA0zkgN8a/HSqTZ9m8TE7Kp650B60CcJCHzGID3x/8rU6kNEWBsfwLje+a0t/9gYiCwm5NSgDDWyv8lomBFXnt3ErR4f8NtfarJBmIaF07oxNOeYvFcqJGv1iKEluoHAs6kWEbwyd/Jb7oRFeN/q5GA9MICDti/mWSdfPx8qHB8MehUO4D/UNSHrZWSUJZkHVHHdMhw2MmHQ==
+X-YMail-OSG: Dy1CGQ4VM1n8eGmjQxsvXvKplEUQR.F_Oi6hsTL48VmKEBsaG6beOy_xkQoSjU6
+ aNIuGH6d14CE2K.k_t6UOblmAe0chujhXOJi3FqEiNgCKe.TK45uO3pUM1rE0Ym0qz7iJt0.i6Y_
+ z7oIKj8TPNK93UsjGZpe1IJjrkv0biuqfqOrJHyXZrZ3wRtpivPGJ1MKSrjmhoP77TXWQ3KCI_Va
+ .ndkAwsimYAXs7V4zGcjWnf1JqFuZ9D1JdjlZakPMnGohjb7maf0n5ohkHg1dyImqWcTw9j5JW94
+ GkKdP5V_PTtvSj3a0wM9FuaqROcTdHGbuy6.HwpnYaDIY0mhLzWjZzvtqV0kPR2LBEX8WncUgLGr
+ HCN15SVAbs0Q6hPVq9WFi.iE4WlGIiSVJA0E0YJaKkQ5XG3jqUyFetdJskDv_lBpxvkDVCeTiLUo
+ kjkevY42hR.o60Hko3uJ2G87Dg4WP53H9JQy7CsyVdOW1R0piBBeA9yjmQnlaDRiyf19ciPI3.4j
+ uCHIPcUAxN6i0joIDD7gxvxqFTAe_MvZq5t2KZtA9O5k8TBPYCUqouuyI8noN6pnleR1KCPb92xm
+ Z3RtnV8A3WNQRMd9WZPAqF4cAcqcsrx0M6id_35EemSz1p0DdgEts4iLZ6Nj54EbJA5chTMEXI5l
+ 7Ktik0OQxv6zNxhzOIQhtXWDBTPEq3oQbfrwW7OA0YiQ8Rb4QUeBi7vSL9KTAQVvZJv97yyetqLW
+ JKyZ8xPqFBYLM_trY2e_XP2L4Vpwc.GprO7UpghVcMwkSBlJLWaDXDAxsLGqtVOA_uloTLuoWVmN
+ Dj16PsiF_k8W9n_7oG_4kgPjSW2NoWPzqgDTuDWouY.MsMj5KWSQgElx0sDZ4QbgrHMSgtGnZ1oW
+ Ok9MiKqWDC87I2GMM6x8Xf3VxmREk7t0DQ9AKZzJyUGFVulpxQ_mUHTR.sWDD2HHK4iwnYjq3vga
+ 4YpWhYVIOh2LeII9AYD.qEDzciT2exVfgttF8mLKwHXY0NTNs41Ha8hcKcKkAR84Qhk0SvPutzza
+ 88JEEYFtXVnThVH2X3XRHpK9H6c8YUQJ8OCad1n0U5PkE3eNqM8sSe4FS3PHJ1g5RWfA47q.dmoz
+ iLDcfg_ZsqQulK9q.FvaIYo33x9_ope7YZujh1XPK6DGAi5yA31A6EUQZq.wMD8gm849soKL2WWT
+ qmp4UlA1ymrASRxOjiQ2cbrdNqEjmYPHTow2yOGbF59wswgMpq2vd1X64G7ipiJ1oR8isWYJxZnE
+ .FZIB6eL_5Ob3lDjG35hGLCjHy81Hnz5TwPCqk280FxBCwiuKgaxVxcfe.Pvq7o6DllslBlv8YJe
+ CTwA2_lYBbJl6TBlmbkBF5pefiN25PNZtZTS411tBSi8tWv2Pdq2m8jOgHd3Hxu86lW19w17p9Xj
+ 59REPtN.VKD4nrwv31L50NjeVaIEccEq7Cq4hVlqjPy7J92ux1ODF8b3Um3UeAxaCfa8SVW4QtzX
+ BkfS5hJYcrbcyKQvCP5.btjL7crNxGtJWb8UsF1LL0mYE1YCsJMMiSlJd09T3An_Jes2GNo301lU
+ x97Ixwk2bcV5MzDsYcLOdTKZvpyYm0B4_XhevVIvyZxfaIfOt6wz_3_mltATKl1pZNgc4jNWLMXN
+ Bkv5RiRocMqd2QvXaLnsXjQ7tEH0_L12AOsQIhDdS6_CpxqsY.grea_Ws2SPK_qRiZbCh96XvGWC
+ 1iinqR4eS894D_wG3fEYnRG.0NLAcOHi4S5xoIuzFPNWPVALiKL8QzyeJyvMqja0YIFoldthet48
+ Y1jJb7POMEDqy2JBuUsmbnAgpTbD9nod47G2KLkpTfSADYzeb8gcRW41L13IPlyRcaoYBVP9yMpm
+ xrUsVilr5DC7eLOhc1edi3ow3jncJ8.BUED0NNIh6QbYW7Ltx2oNSGELVNl5oEsEapJKI.X6K_jD
+ sltFERhhSDeZjyYhfZKky1HtIl2hrJxwIPd3R_Axl1hzzhanWuuw2cgNS72c_ZO4oZG7k8inDj8F
+ W2PAeNjCQ8kROC_odrxgtYgnbde8dntJ92PEZLQDTGp5HDUX0BWRaAZZ9qLKfAWMUEWEk2pOWub7
+ ndJYZYyXKAb1NAynx6IUFD6tUlT.diA.GuWsprJBYTsyCXmYRmPxDDruMU1gXa_1fx9OIedhdQVn
+ ClVxbdvMWUikCxoowCAE0i7cLw.lVWZhy0KFm05OflYRTZYVBFOwmVftT4ADaFo5qzDtVmwvarrH
+ aiMgo7haHYOMeuHhQPhnbUz7OrOph7N1JTzbPa8u9wJb4w1Oc5e6VbLa_cFLjo6Gm8wD4BzGPhXa
+ veTyT16ECCrnu4L1_PAc_x4EaUBFuojP1lO7zFR4bt1XQu5ZMJTSVTKlu_ynk9MgLkW3ZbSj6M8x
+ oBu6YQekF1JTaXwP7F5Nr8wtvwmChVi5QyyZeBQCIQq5yNBkZ13eoAzVmPp29V4I1SfA9qgLkN2K
+ vazpfPDqiD6TxLocFKuhgQ20Q.9BB_KsblcPFhQ3M.lxk4uGcEamICLkLT8vah1FUYiTsl.HUf6f
+ JOi67yP3VNxv66Mw8PWUGouC8WA--
+X-Sonic-MF: <kameran28@yahoo.com>
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic314.consmr.mail.bf2.yahoo.com with HTTP; Mon, 5 Apr 2021 15:54:24 +0000
+Date: Mon, 5 Apr 2021 15:54:22 +0000 (UTC)
+From: mohameed yosef <kameran28@yahoo.com>
+To: "vnarist@my.tnstate.edu" <vnarist@my.tnstate.edu>
+Cc: "cameronfagan20@gmail.com" <cameronfagan20@gmail.com>
+Message-ID: <255449669.2273876.1617638062034@mail.yahoo.com>
+Subject: mytest.cpp
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2273875_1902916386.1617638062032"
+References: <255449669.2273876.1617638062034.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.17936 YMailNorrin Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36
+Content-Length: 3822
+
+------=_Part_2273875_1902916386.1617638062032
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+#include <iostream>#include "tinyxml2.h"using namespace tinyxml2;using namespace std;int main() { std::cout << "learning\n"; XMLDocument doc;
+doc.LoadFile("store.xml");//XMLNodeList mylist=doc.FirstChildElement("store")->ChildElement("item");const XMLElement* item1=doc.FirstChildElement("store")->FirstChildElement("Item");cout<<item1;const XMLElement* item2=item1->NextSiblingElement("Item");cout<<item2;}/*<ToDo> <!-- Do I need a secure PDA? --> <Item priority="1" distance="close">Go to the <bold>Toy store!</bold> </Item> <Item priority="2" distance="none">Do bills</Item> <Item priority="2" distance="far &amp; back">Look for Evil Dinosaurs!</Item></ToDo>*/
+
+------=_Part_2273875_1902916386.1617638062032
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:13px;"><div dir=
+=3D"ltr" data-setdir=3D"false"><div><div style=3D"color: rgb(0, 0, 0); back=
+ground-color: rgb(255, 255, 254); font-family: Menlo, Monaco, &quot;Courier=
+ New&quot;, monospace; font-size: 14px; line-height: 21px; white-space: pre=
+-wrap;"><div><span style=3D"color: #0000ff;">#include</span> <span style=3D=
+"color: #0000ff;">&lt;</span><span style=3D"color: #a31515;">iostream</span=
+><span style=3D"color: #0000ff;">&gt;</span></div><div><span style=3D"color=
+: #0000ff;">#include</span> <span style=3D"color: #0000ff;">"</span><span s=
+tyle=3D"color: #a31515;">tinyxml2.h</span><span style=3D"color: #0000ff;">"=
+</span></div><div><span style=3D"color: #0000ff;">using</span> <span style=
+=3D"color: #0000ff;">namespace</span> tinyxml2;</div><div><span style=3D"co=
+lor: #0000ff;">using</span> <span style=3D"color: #0000ff;">namespace</span=
+> std;</div><div><span style=3D"color: #0000ff;">int</span> main() {</div><=
+div>  std::cout &lt;&lt; <span style=3D"color: #a31515;">"learning</span><s=
+pan style=3D"color: #ff69b4;">\n</span><span style=3D"color: #a31515;">"</s=
+pan>;</div><div>  XMLDocument doc;</div><br><div>doc.LoadFile(<span style=
+=3D"color: #a31515;">"store.xml"</span>);</div><div><span style=3D"color: #=
+aaaaaa;">//XMLNodeList mylist=3Ddoc.FirstChildElement("store")-&gt;ChildEle=
+ment("item");</span></div><div><span style=3D"color: #0000ff;">const</span>=
+ XMLElement* item1=3Ddoc.FirstChildElement(<span style=3D"color: #a31515;">=
+"store"</span>)-&gt;FirstChildElement(<span style=3D"color: #a31515;">"Item=
+"</span>);</div><div>cout&lt;&lt;item1;</div><div><span style=3D"color: #00=
+00ff;">const</span> XMLElement* item2=3Ditem1-&gt;NextSiblingElement(<span =
+style=3D"color: #a31515;">"Item"</span>);</div><div>cout&lt;&lt;item2;</div=
+><div>}</div><div><span style=3D"color: #aaaaaa;">/*</span></div><div><span=
+ style=3D"color: #aaaaaa;">&lt;ToDo&gt;</span></div><div><span style=3D"col=
+or: #aaaaaa;">    &lt;!-- Do I need a secure PDA? --&gt;</span></div><div><=
+span style=3D"color: #aaaaaa;">    &lt;Item priority=3D"1" distance=3D"clos=
+e"&gt;Go to the</span></div><div><span style=3D"color: #aaaaaa;">        &l=
+t;bold&gt;Toy store!&lt;/bold&gt;</span></div><div><span style=3D"color: #a=
+aaaaa;">    &lt;/Item&gt;</span></div><div><span style=3D"color: #aaaaaa;">=
+    &lt;Item priority=3D"2" distance=3D"none"&gt;Do bills&lt;/Item&gt;</spa=
+n></div><div><span style=3D"color: #aaaaaa;">    &lt;Item priority=3D"2" di=
+stance=3D"far &amp;amp; back"&gt;Look for Evil Dinosaurs!&lt;/Item&gt;</spa=
+n></div><div><span style=3D"color: #aaaaaa;">&lt;/ToDo&gt;</span></div><div=
+><span style=3D"color: #aaaaaa;">*/</span></div></div></div><br></div></div=
+></body></html>
+------=_Part_2273875_1902916386.1617638062032--

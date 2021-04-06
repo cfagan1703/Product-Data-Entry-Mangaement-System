@@ -1,0 +1,146 @@
+Delivered-To: cameronfagan20@gmail.com
+Received: by 2002:a4f:218f:0:0:0:0:0 with SMTP id h137csp3176263ivh;
+        Mon, 5 Apr 2021 08:50:17 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwVQI9VEl2uyqghUA3FaKcDqMKZ5+UR8Rb1NYApNbao4Z2FanUpaRJ+dhDwSG3R1smK6os1
+X-Received: by 2002:a0c:fa0d:: with SMTP id q13mr24259516qvn.15.1617637817159;
+        Mon, 05 Apr 2021 08:50:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1617637817; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Hucizh9n3QrSb4UFd1D+OlT1ygVcMwvwuiB+jakWCm6f2mlpwZksDUK0cKlmRlIqUD
+         JnNVNHt/+e2sCPC5fiHye93+rLZ6nJ9UmeZY+TNl98sBbwhKOxD4+nleLBWPSgT47Twa
+         jJdRV9EC0CHm0QuC7RgLlyaogqsoiH0EDwivhMCCRtzHsyXxDwh4LaiJh0nOyRfbn7Xm
+         vW+BLDHGJ2sUI9eX5AdvZzn35kZy3o3vyZrA8WODoMFv3gNsm5DDLPKsahwGrao9LYkR
+         ceGUEe5tEv4xxtD5yfagfblZDwq0/NwSyR5VFhYKoyNDZJJYpeDwyJfLU87pKHwvPkpt
+         50PA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:mime-version:subject:message-id:cc:to:from:date
+         :dkim-signature;
+        bh=7dQFNMF5jqI1+/kU7sryL614qQYdooeFNzcl/1UQh5c=;
+        b=ubvLKt9oILQdumKJEKPX9dNZgiQPzMmd2R34dWTzKYtj27zY5lb4EJdebcLniQ6leO
+         tA2SWwoJW57CsIMRoQdpNWZZfltrn8XThS7uDqzLB3gXUXtA/+MDY7B3B+Al0AJCsP5J
+         euWCrY02UDF3P6lTy06xkie0wPxD+huUWQjvwzOHhGw2yQE9JoOk1KB4+OiM9vLdWmUb
+         n8xAtV6dkqVhBJa+ujSnC+boxHzinvthmtDUW1aEuYLb3b3AWahnbl5Ij9942F2at+Oj
+         cuelA77OFEGvwZbs3UDbbBpbUF8tMqoizC0Hb2Gh9MQ5xwJjXppLcWCzt58MuDsVfLMM
+         C/7A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=AsdPaBxd;
+       spf=pass (google.com: domain of kameran28@yahoo.com designates 74.6.135.41 as permitted sender) smtp.mailfrom=kameran28@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <kameran28@yahoo.com>
+Received: from sonic302-2.consmr.mail.bf2.yahoo.com (sonic302-2.consmr.mail.bf2.yahoo.com. [74.6.135.41])
+        by mx.google.com with ESMTPS id n5si9415344qtr.321.2021.04.05.08.50.16
+        for <cameronfagan20@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 05 Apr 2021 08:50:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kameran28@yahoo.com designates 74.6.135.41 as permitted sender) client-ip=74.6.135.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=AsdPaBxd;
+       spf=pass (google.com: domain of kameran28@yahoo.com designates 74.6.135.41 as permitted sender) smtp.mailfrom=kameran28@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1617637816; bh=7dQFNMF5jqI1+/kU7sryL614qQYdooeFNzcl/1UQh5c=; h=Date:From:To:Cc:Subject:References:From:Subject:Reply-To; b=AsdPaBxdtNKhalChLm6bRSVun5mDi11c2eLNcGk9NqjIbkCUCOiv/LlLSbqjjFMQzHXYmFTZC76ZB+V/IudQvjaUaKwvBeCudHvT+z2J3i9fyIoBZuRRGqZ+vDK1DMrCGhj4D1hJy1OlnwHhbAY3iiykYlraEtyz24u6AS+5ZHGwJUVfALlkl4OWxvcDbapVsiu/ysAmIzpXyx2PDevliyXpWs4JV9PSlhRUuv1liwlffarWSatMSpcbPY9UCMI/daNVMogbtlefpEzdMD4wTKg2AWjT479kz/ivrygBCz0c1ap85Yj0oatQw87T5zI2/ogr/mBqeFpwPOcREMgzGQ==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1617637816; bh=pWQdSyTHPwxHTbdAT8iIxaIQmmPDR+9fTCvSztv1QZZ=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=ObCMY3u1DwIQ7G2/HCRCoCQCVxkvtYx5+4lYoQ1r2DUuPrOtUWZkodq+/BZaIe+UIpCXs0kQjvbrFFw25nYnXGqoxPK4eV0vx17DamiSSUhlnP3fRpyoQgSEbAq8HUvwpK6y00T2WyN/wPFEpnolvQ1DdQC4u8DL/YpGQIUqEwmi2Eu9f2jALXf3ZfbRMigIX+m1nzpvk6hs1Y7ngOS8pBaoree7qL6tzbAzTUNfMtzefStt0V7IA08u6Q0+dJ1xqnDBKDfgDbWZpbhr8K67cFZ7QRANZEdn8Hlk+t0WbMGGSQfw6Z4Mb8viPzRMTkUbJAsxTq4/plLuoV4AEZjgXg==
+X-YMail-OSG: IS497c4VM1kD.Eion3OnS_2T1wExL_t9gEnEgZxD9RKsj2OKFRflivsXjhkQQuF
+ 18sxBwnBYR0ooYkNQGqI0zOWOzzHSIsalZ_IwrRiekzwMK00N.xFg2WY4jkp9opGm7KjJqWfIUap
+ 2cvXYKNoG.9FdsLnmZp6PdzvlNX727eF_vZB1og29xFkvQ6F8kbtDLVoS23ebjrz7vTY.bL4VdIo
+ gO1S8hyI8CiO7psH1qlghEzVWWo3fDyds9YU_rAwNUP7eVVIUxsJ9w2OzSFyJPN37xaY5JGb.QUq
+ Xd4RsM3hSJP92.W9oKEo1s1aXWoAWgch8DuBizRJEjYkOm5Nn9Q1yGYS3DdoMHmi3zhHnGCu4u3v
+ Yb_tw2pIIX4c9FgPtKKXrOq.PjVOvD88Dz8qi_Bal.4n.gvJyFeplr2EW5OTje2gWKZi0D9UBgos
+ 6HbWyQAW4__p4OPIaBLcm00oAEjQGT_cFTFgGIeSpE5V532uCe8KDp25u2XoV9DDCMcJ4AN7zvpl
+ DqZ1grIoQcMmf.hZwhN1Do2mx4RDrEPC4DVpFj.qOYBQgUeldMrBHOOX2t3QuJnwctyeB3w9TufO
+ 5nP.AQ5ZnnQnTlozlIBcc1UZrvRdCQ7FGoGxCgHCneM_lDG3O_pveyQRo9eVwiMvxHvnuVNH2vPR
+ 0wio8UgTlvJOBZZ9eTjF9Pcxci0aD_rliu4x10aQ.XstltoGrVqwFODmXt5KaVzfRW.McljBmIaE
+ mxA7deUx1_7PbzfOzeUlfg9ol3FQU5U4CRFuqC1DSLB.errmB.xMq2OfRqGc5B4rNvoZS7g5mw9.
+ g6ZAgbvQBITQCGtkjLVabOeZ5_q9tAYMKV0UycsmRvtSz7lB5I4l4sv2hJuzMnOvqCa.Zgf9Sp8r
+ eJGaOmdWncvM.h5tMe75jtwCWpteIf_0m0VvZurv_8q1zCA7S3.x_yzZKujA92CR_Wm3kcGMYbgr
+ hSwy6at5iGcqyA212Q3H4Um4VaHqto3Sx085uXhWtkwkwz_UafrNWmLJ4vd9DlzL1blSDzJ2Xr32
+ PV8TW6zfPxqHRy8xtqSzWrXykQuEgjQ_8CM9Bv70T5g1z7PYNSVjWnoZa.MIkzk1bXzj1SteKyOc
+ nUKGASylQ8zx4oGb1C4etzAHxuEnXMprePWDJ86H9uVWqmGjRZ_3TsY4hkeMNbhBHFyXD9cpZsqx
+ GLcQE0ZwcMzcQneK8I3Dh9qLGIDi2bUhSMtH6GZjJNWh8MpTzPDr3D9N9cLE2ZlWieSXY.KuThfs
+ 4ktbw1eQpaOOz41ndqgdDJCLP6iyx0LZrS3mEhZKYtmVeG110jaA69BDF9C0zyS2LrzuFMYSnM5X
+ XsMR9QiPs0oV45R8YFAfxCa0f0vMwwzy3i32v3KQD8nkl_1lGUh1PrhTzmJaNRKQo1TxzwmUo9u3
+ N8Bu4wYJfccBCEi0PrOVc2HVyn2ew0XBKaGABAPhZsA0q9AFd4sb.ulpfpZTF9PbilN9Rd_c3Me3
+ G4yiD_yp7mmQuHExzuawe8eI8GQDQ5qVnQb.koeuPGUbzvu83AvIDDmmJqDC_jx2NcUob1swWmCR
+ CmwYR5HhD8Nfh2Dwfel_pjOGE9zj21KiakSb2PvuJFwMfzFcA7ZN8zLUjrLcg4_0P3lEWhRKwyEX
+ 5.lVrLpfz4LzLQ4mhLKZeedygEAEAvyNrbnZzLVdvhBJqTBuvJk1pV4MOarjxWrCACRa1U99rdUr
+ _NmvlQn4XxL1rlkQ1QhtV8d32weHJcC9vyk3L1abWpC4qg.12dz_1ivx1Is88NvaXiNAX.k7co3J
+ Rs1lXFxZmViQ1ibi0OgTgm6hbwAqGGJf744ZWgchi7AIvyRP76kfFrU26jOVFLwN_bffXacUEcT5
+ R81FY0WoUyHhCidY3hg9C_omxRMJaywYcxl7HmssshnD7Xesi4GY.UfowfPA2IuVZNHFLNhe9xOH
+ Fo0OG8uB9zeXklwyXxs0CCVeOGUbLCVPYFmc7gnIRLUyHVSQQYQPKptPnX21OjehH6cS_CEJDYei
+ zPTWCW9MYa7e0wc.8BeiPBnRNdwxLJTgtepxo8vlRbokTOYxvqhnjsiG5FD_VkDJo0j_bMTL4sVB
+ 4ZY7AAdH9eSzKKaAC7SelChiZF.dkU4bGVlu0UOiF4LVgd3qAKBgC_275JNStez9zmU2bJPS0LfB
+ oa_d78Iot99CuqGuBp67EVbHMCd1QHR1LLbZGKe25nZnIldU6wpaiOtZNBzEvWxILJAqCrsfmjO4
+ 6F95CXokuPvMsrco05j6bO0Jjz5oQGXX1Yxx7.npuuhpxK9CdnHeKhBFhumIxGjuXPUznLnzGSUD
+ ob09f_NV7GA_vqJQ4owcbSCTB23RnJZhGJoTpqIg9ZVlXLq_FJgrQCunepVz3L8jMUayJxDRICtY
+ e2wgYFyoqOljcvI7FFq7cVLiv3wJAW8JKJJapMzDSSK86mFDuTFIsm5ZrLebdaM8EcCXBUmvIauL
+ Sw7VtmYmShQ96.iNsMy.UU_wSYxjcBnqae4DFNd9lt5zmJcQTh.PD9xO0yyFIp7Zty_mA9bbjrJC
+ QpIEvoTxkyaGia9O1mNZe
+X-Sonic-MF: <kameran28@yahoo.com>
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic302.consmr.mail.bf2.yahoo.com with HTTP; Mon, 5 Apr 2021 15:50:16 +0000
+Date: Mon, 5 Apr 2021 15:50:12 +0000 (UTC)
+From: mohameed yosef <kameran28@yahoo.com>
+To: "vnariset@my.tnstate.edu" <vnariset@my.tnstate.edu>
+Cc: "cameronfagan20@gmail.com" <cameronfagan20@gmail.com>
+Message-ID: <38351434.347674.1617637812002@mail.yahoo.com>
+Subject: store,XML
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_347673_1525622426.1617637812001"
+References: <38351434.347674.1617637812002.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.17936 YMailNorrin Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36
+Content-Length: 4044
+
+------=_Part_347673_1525622426.1617637812001
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<?xml version="1.0" standalone="no" ?><!-- Our to do list data --><store> <!-- Do I need a secure PDA? --> <Item size="small" color="black" price="20" quantity="50">small black backpack </Item> <Item zise="medum" color="red" price="15" quantity="50">medum red backpack</Item> <Item size="larg" color="blue" price="10" quantity="50">larg blue backpack</Item></store>
+
+------=_Part_347673_1525622426.1617637812001
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:13px;"><div dir=
+=3D"ltr" data-setdir=3D"false"><div><div style=3D"color: rgb(0, 0, 0); back=
+ground-color: rgb(255, 255, 254); font-family: Menlo, Monaco, &quot;Courier=
+ New&quot;, monospace; font-size: 14px; line-height: 21px; white-space: pre=
+-wrap;"><div><span style=3D"color: #0000ff;">&lt;?</span><span style=3D"col=
+or: #808080;">xml</span> <span style=3D"color: #ff0000;">version</span>=3D<=
+span style=3D"color: #0000ff;">"1.0"</span> <span style=3D"color: #ff0000;"=
+>standalone</span>=3D<span style=3D"color: #0000ff;">"no"</span> <span styl=
+e=3D"color: #0000ff;">?&gt;</span></div><div><span style=3D"color: #aaaaaa;=
+">&lt;!--</span><span style=3D"color: #aaaaaa;font-style: italic;"> Our to =
+do list data </span><span style=3D"color: #aaaaaa;">--&gt;</span></div><div=
+><span style=3D"color: #0000ff;">&lt;</span><span style=3D"color: #800000;"=
+>store</span><span style=3D"color: #0000ff;">&gt;</span></div><div>    <spa=
+n style=3D"color: #aaaaaa;">&lt;!--</span><span style=3D"color: #aaaaaa;fon=
+t-style: italic;"> Do I need a secure PDA? </span><span style=3D"color: #aa=
+aaaa;">--&gt;</span></div><div>    <span style=3D"color: #0000ff;">&lt;</sp=
+an><span style=3D"color: #800000;">Item</span> <span style=3D"color: #ff000=
+0;">size</span>=3D<span style=3D"color: #0000ff;">"small"</span> <span styl=
+e=3D"color: #ff0000;">color</span>=3D<span style=3D"color: #0000ff;">"black=
+"</span> <span style=3D"color: #ff0000;">price</span>=3D<span style=3D"colo=
+r: #0000ff;">"20"</span> <span style=3D"color: #ff0000;">quantity</span>=3D=
+<span style=3D"color: #0000ff;">"50"&gt;</span>small black backpack</div><d=
+iv>    <span style=3D"color: #0000ff;">&lt;/</span><span style=3D"color: #8=
+00000;">Item</span><span style=3D"color: #0000ff;">&gt;</span></div><div>  =
+  <span style=3D"color: #0000ff;">&lt;</span><span style=3D"color: #800000;=
+">Item</span> <span style=3D"color: #ff0000;">zise</span>=3D<span style=3D"=
+color: #0000ff;">"medum"</span> <span style=3D"color: #ff0000;">color</span=
+>=3D<span style=3D"color: #0000ff;">"red"</span> <span style=3D"color: #ff0=
+000;">price</span>=3D<span style=3D"color: #0000ff;">"15"</span> <span styl=
+e=3D"color: #ff0000;">quantity</span>=3D<span style=3D"color: #0000ff;">"50=
+"&gt;</span>medum red backpack<span style=3D"color: #0000ff;">&lt;/</span><=
+span style=3D"color: #800000;">Item</span><span style=3D"color: #0000ff;">&=
+gt;</span></div><div>    <span style=3D"color: #0000ff;">&lt;</span><span s=
+tyle=3D"color: #800000;">Item</span> <span style=3D"color: #ff0000;">size</=
+span>=3D<span style=3D"color: #0000ff;">"larg"</span> <span style=3D"color:=
+ #ff0000;">color</span>=3D<span style=3D"color: #0000ff;">"blue"</span> <sp=
+an style=3D"color: #ff0000;">price</span>=3D<span style=3D"color: #0000ff;"=
+>"10"</span> <span style=3D"color: #ff0000;">quantity</span>=3D<span style=
+=3D"color: #0000ff;">"50"&gt;</span>larg blue backpack<span style=3D"color:=
+ #0000ff;">&lt;/</span><span style=3D"color: #800000;">Item</span><span sty=
+le=3D"color: #0000ff;">&gt;</span></div><div><span style=3D"color: #0000ff;=
+">&lt;/</span><span style=3D"color: #800000;">store</span><span style=3D"co=
+lor: #0000ff;">&gt;</span></div></div></div><br></div></div></body></html>
+------=_Part_347673_1525622426.1617637812001--
